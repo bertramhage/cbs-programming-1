@@ -55,14 +55,13 @@ The data contains numeric and character data types.
 "Low". Use a conditional statement for this. -->
 ```{r}
 range(data$Exam_Score)
-# min 55
-# max 101
 
 summary(data$Exam_Score)
 
 data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
 
-head(data["Exam Score Category"],100)
+head(data["Exam Score Category"],10)
+
 
 print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
