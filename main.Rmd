@@ -74,13 +74,13 @@ print(data[, c("Exam_Score", "ExamScoreCategory")])
 ## 6. Replace text
 <!-- 6. Replace some text in one column with some other text -->
 ```{r}
-# Replacing High with Above Avarage, medium with Average and low with Below Average from the "ExamScoreCategory" column just created
+# Replacing High with Above Average, medium with Average and low with Below Average from the "ExamScoreCategory" column just created
 
-data$ExamScoreCategory <- gsub("High", "Above Avarage", data$ExamScoreCategory)
+data$ExamScoreCategory <- gsub("High", "Above Average", data$ExamScoreCategory)
 
-data$ExamScoreCategory <- gsub("Medium", "Avarage", data$ExamScoreCategory)
+data$ExamScoreCategory <- gsub("Medium", "Average", data$ExamScoreCategory)
 
-data$ExamScoreCategory <- gsub("Low", "Below Avarage", data$ExamScoreCategory)
+data$ExamScoreCategory <- gsub("Low", "Below Average", data$ExamScoreCategory)
 
 head(data["ExamScoreCategory"], 10)
 
