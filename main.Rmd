@@ -29,7 +29,6 @@ theme_set(theme_bw())
 1+1
 # Bertram og Alexander er grimme
 # Felix er pæn
-# men alex kan ikke kode 1æl3k12
 # Import csv
 data <- read_csv("data.csv")
 ```
