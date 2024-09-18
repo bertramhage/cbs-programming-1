@@ -31,7 +31,17 @@ theme_set(theme_bw())
 data <- read_csv("data.csv")
 ```
 
-felix test
+The dataset consists of **6,607 rows** and **20 columns**. 
+
+#### Summary statistics for the numeric variables:
+- **Hours Studied**: The number of hours studied by students ranges from 1 to 44 hours, with a median of 20 hours. The mean is approximately 19.98 hours.
+- **Attendance**: The attendance percentage varies between 60% and 100%. The median attendance is 80%, with a mean of 79.98%.
+- **Sleep Hours**: Students report sleeping between 4 and 10 hours per night, with a median of 7 hours and a mean of 7.03 hours.
+- **Previous Scores**: Scores from previous assessments range from 50 to 100, with a median of 75 and a mean of 75.07.
+- **Tutoring Sessions**: Students attended between 0 and 8 tutoring sessions. The median number of sessions is 1, while the mean is 1.49.
+- **Physical Activity**: Physical activity engagement varies from 0 to 6 sessions, with a median of 3 sessions and a mean of 2.97.
+- **Exam Score**: The exam scores range from 55 to 101, with a median score of 67 and a mean of 67.24.
+
 ## 3. Data types
 <!-- 3. What data types do your data contain? -->
 
