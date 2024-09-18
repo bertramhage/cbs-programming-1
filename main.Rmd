@@ -34,7 +34,7 @@ theme_set(theme_bw())
 data <- read_csv("data.csv")
 ```
 
-
+felix test
 ## 3. Data types
 <!-- 3. What data types do your data contain? -->
 
