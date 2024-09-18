@@ -58,7 +58,7 @@ range(data$Exam_Score)
 
 summary(data$Exam_Score)
 
-data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
+data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score >= 70, "High", ifelse(data$Exam_Score >= 65, "Medium", "Low"))
 
 head(data["ExamScoreCategory"], 10)
 
