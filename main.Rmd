@@ -44,6 +44,11 @@ The dataset consists of **6,607 rows** and **20 columns**.
 
 ## 3. Data types
 <!-- 3. What data types do your data contain? -->
+```{r}
+sapply(data, class)
+```
+
+The data contains numeric and character data types.
 
 ## 4. New categorial variable
 <!-- 4. Create a variable (new column) that categorizes the numeric variable as "High," "Medium," or
