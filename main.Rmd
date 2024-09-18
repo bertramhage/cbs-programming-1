@@ -30,6 +30,8 @@ theme_set(theme_bw())
 
 1+1
 # Bertram og Alexander er grimme
+# Import csv
+data <- read_csv("data.csv")
 ```
 
 
