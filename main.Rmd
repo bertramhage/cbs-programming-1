@@ -11,6 +11,8 @@ output:
 ## 1. Data
 <!-- 1. Write a short section about your data and why it is interesting to work with this data. -->
 
+The dataset we have chosen contains a good amount of variables that can be analyzed to understand which factors affects student performance. The dataset contains information about hours studied, exam scores, and other variables that offers insights into which variables have the most impact on student performance. Working with this dataset allows us to identify key predictors for a student's performance and can be used for schools to understand how to improve academic success.
+
 ## 2. Data structure
 <!-- 2. Load the dataset into R and inspect its structure. How many rows, how many columns, what is the
 summary statistics for the numeric variables? -->
@@ -25,11 +27,6 @@ theme_set(theme_bw())
 ```
 ```{r}
 # Add code here
-
-1+1
-# Bertram og Alexander er grimme
-# Felix er pæn
-# men alex kan ikke kode 1æl3k12
 # Import csv
 data <- read_csv("data.csv")
 ```
