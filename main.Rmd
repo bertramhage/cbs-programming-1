@@ -26,7 +26,8 @@ library(readxl)
 theme_set(theme_bw())
 ```
 ```{r}
-# Add code here
+# Import csv
+data <- read_csv("data.csv")
 ```
 
 
