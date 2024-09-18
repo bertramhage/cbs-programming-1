@@ -11,8 +11,6 @@ output:
 ## 1. Data
 <!-- 1. Write a short section about your data and why it is interesting to work with this data. -->
 
-
-
 ## 2. Data structure
 <!-- 2. Load the dataset into R and inspect its structure. How many rows, how many columns, what is the
 summary statistics for the numeric variables? -->
