@@ -57,12 +57,13 @@ The data contains numeric and character data types.
 range(data$Exam_Score)
 # min 55
 # max 101
+
 summary(data$Exam_Score)
+
 data[["Exam Score Category"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
 
-# Display the first 10 rows of the dataset
 head(data["Exam Score Category"],100)
-# Add code here
+
 ```
 
 ## 5. Using a loop
