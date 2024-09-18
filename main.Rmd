@@ -62,7 +62,6 @@ data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$
 
 head(data["Exam Score Category"],10)
 
-
 print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
 
