@@ -60,10 +60,11 @@ range(data$Exam_Score)
 
 summary(data$Exam_Score)
 
-data[["Exam Score Category"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
+data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
 
 head(data["Exam Score Category"],100)
 
+print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
 
 ## 5. Using a loop
