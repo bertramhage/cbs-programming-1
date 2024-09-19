@@ -85,6 +85,7 @@ data$ExamScoreCategory <- gsub("Low", "Below Average", data$ExamScoreCategory)
 
 head(data["ExamScoreCategory"], 10)
 
+print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
 
 ## 7. Subset the data.frame
