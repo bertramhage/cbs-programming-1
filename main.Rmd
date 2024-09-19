@@ -99,7 +99,16 @@ with the tools you’ve gotten so far) -->
 ### 7.a. Number of instances
 <!-- a. Count the number of instances (lines) from each category -->
 ```{r}
-# Add code here
+
+dim(data)
+
+names(data)
+
+for (i in names(data)) {
+  print(i)
+  print(table(data[[i]]))
+}
+
 ```
 
 ### 7.b. Mean
