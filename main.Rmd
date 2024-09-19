@@ -114,7 +114,25 @@ for (i in names(data)) {
 ### 7.b. Mean
 <!-- b. Calculate the mean of one on the numeric variables with respect to each category -->
 ```{r}
-# Add code here
+# Number of each category
+college_count <- sum(data$Parental_Education_Level == "College", na.rm = TRUE)
+high_school_count <- sum(data$Parental_Education_Level == "High School", na.rm = TRUE)
+postgraduate_count <- sum(data$Parental_Education_Level == "Postgraduate", na.rm = TRUE)
+
+# Total number 
+total_non_na <- sum(!is.na(data$Parental_Education_Level))
+
+# Mean of parental education level for each category
+college_mean <- college_count / total_non_na
+high_school_mean <- high_school_count / total_non_na
+postgraduate_mean <- postgraduate_count / total_non_na
+
+data.frame(college_mean, high_school_mean, postgraduate_mean)
+
+# example using mean function
+male_mean <- mean(data$Gender=="Male")
+female_mean <- mean(data$Gender=="Female")
+data.frame(male_mean, female_mean)
 ```
 
 ## 8. Reflection
