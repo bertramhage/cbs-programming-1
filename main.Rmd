@@ -117,7 +117,7 @@ print(data[, c("Exam_Score", "ExamScoreCategory")])
 sector”). (Hint: You will get an elegant way of solving it in week 40, but you do have tools to solve it
 with the tools you’ve gotten so far) -->
 ```{r}
-# Add 
+# Add code here
 
 data_male <- subset(data, Gender == "Male")
 data_female <- subset(data, Gender == "Female")
