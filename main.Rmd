@@ -75,6 +75,25 @@ print(data[, c("Exam_Score", "ExamScoreCategory")])
 <!-- 5. Use a loop to iterate through all rows and do the same task as in question 4, using conditions. -->
 ```{r}
 # Add code here
+
+data$ExamScoreCategory_Loop <- NA
+
+for (i in 1:nrow(data)) {
+  
+  score <- data$Exam_Score[i]
+  
+  if (score > 70) {
+    data$ExamScoreCategory_Loop[i] <- "High"
+  } else if (score > 65) {
+    data$ExamScoreCategory_Loop[i] <- "Medium"
+  } else {
+    data$ExamScoreCategory_Loop[i] <- "Low"
+  }
+}
+
+head(data[, c("ExamScoreCategory_Loop")], 10)
+
+print(data[, c("Exam_Score", "ExamScoreCategory_Loop")])
 ```
 
 ## 6. Replace text
