@@ -74,7 +74,6 @@ print(data[, c("Exam_Score", "ExamScoreCategory")])
 ## 5. Using a loop
 <!-- 5. Use a loop to iterate through all rows and do the same task as in question 4, using conditions. -->
 ```{r}
-# Add code here
 
 data$ExamScoreCategory_Loop <- NA
 
