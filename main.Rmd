@@ -31,6 +31,12 @@ theme_set(theme_bw())
 data <- read_csv("data.csv")
 ```
 
+```{r}
+print(paste("Number of rows: ", nrow(data)))
+print(paste("Number of columns: ", ncol(data)))
+print(summary(data[, sapply(data, is.numeric)]))
+```
+
 The dataset consists of **6,607 rows** and **20 columns**. 
 
 #### Summary statistics for the numeric variables:
