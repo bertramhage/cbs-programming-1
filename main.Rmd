@@ -25,9 +25,7 @@ library(lubridate)
 library(readxl)
 theme_set(theme_bw())
 ```
-```{r}
-# Add code here
-# Import csv
+```{r, message=FALSE}
 data <- read_csv("data.csv")
 ```
 
@@ -60,13 +58,9 @@ The data contains numeric and character data types.
 <!-- 4. Create a variable (new column) that categorizes the numeric variable as "High," "Medium," or
 "Low". Use a conditional statement for this. -->
 ```{r}
-range(data$Exam_Score)
-
 summary(data$Exam_Score)
 
 data[["ExamScoreCategory"]] <- ifelse(data$Exam_Score > 70, "High", ifelse(data$Exam_Score > 65, "Medium", "Low"))
-
-head(data["ExamScoreCategory"], 10)
 
 print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
@@ -90,8 +84,6 @@ for (i in 1:nrow(data)) {
   }
 }
 
-head(data[, c("ExamScoreCategory_Loop")], 10)
-
 print(data[, c("Exam_Score", "ExamScoreCategory_Loop")])
 ```
 
@@ -107,8 +99,6 @@ data$ExamScoreCategory <- gsub("Medium", "Average", data$ExamScoreCategory)
 
 data$ExamScoreCategory <- gsub("Low", "Below Average", data$ExamScoreCategory)
 
-head(data["ExamScoreCategory"], 10)
-
 print(data[, c("Exam_Score", "ExamScoreCategory")])
 ```
 
@@ -117,54 +107,38 @@ print(data[, c("Exam_Score", "ExamScoreCategory")])
 sector”). (Hint: You will get an elegant way of solving it in week 40, but you do have tools to solve it
 with the tools you’ve gotten so far) -->
 ```{r}
-# Add code here
-
 data_male <- subset(data, Gender == "Male")
 data_female <- subset(data, Gender == "Female")
 
-head(data_male)
-head(data_female)
+head(data_male['Gender'], 5)
+head(data_female['Gender'], 5)
 ```
 
 ### 7.a. Number of instances
 <!-- a. Count the number of instances (lines) from each category -->
 ```{r}
 
-dim(data)
+dim(data_male)
 
-names(data)
-
-for (i in names(data)) {
-  print(i)
-  print(table(data[[i]]))
-}
+dim(data_female)
 
 ```
 
 ### 7.b. Mean
 <!-- b. Calculate the mean of one on the numeric variables with respect to each category -->
 ```{r}
-# Number of each category
-college_count <- sum(data$Parental_Education_Level == "College", na.rm = TRUE)
-high_school_count <- sum(data$Parental_Education_Level == "High School", na.rm = TRUE)
-postgraduate_count <- sum(data$Parental_Education_Level == "Postgraduate", na.rm = TRUE)
-
-# Total number 
-total_non_na <- sum(!is.na(data$Parental_Education_Level))
-
-# Mean of parental education level for each category
-college_mean <- college_count / total_non_na
-high_school_mean <- high_school_count / total_non_na
-postgraduate_mean <- postgraduate_count / total_non_na
-
-data.frame(college_mean, high_school_mean, postgraduate_mean)
-
-# example using mean function
-male_mean <- mean(data$Gender=="Male")
-female_mean <- mean(data$Gender=="Female")
-data.frame(male_mean, female_mean)
+mean(data_male$Exam_Score)
+mean(data_female$Exam_Score)
 ```
 
 ## 8. Reflection
 <!-- 8. Use the results and your business knowledge to describe the situation. Including reflection on usage
 of AI-tools. -->
+The data set is a mix of numeric and categorical variables that provide insights into student performance.
+Exam scores are amoung all students on average 67.24 and range from 55 to 101.
+The dataset contains in total 6607 rows where of 3814 are male students and 2793 are female students.
+Assignment 7.b shows that there doesn't appear to be any difference in exam scores based on gender alone.
+
+Further analysis could be conducted on the data to uncover possible relationships or trends apparent in the data.
+Furthermore, the use of AI-tools can help in analyzing large datasets and identifying patterns that might not be immediately obvious to human analysts. 
+These tools can help in making data-driven decisions and predictions based on such data.
